@@ -17,7 +17,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize)
 	unsigned int	lens;
 	char			*str;
 
-	str = (char *) src;
+	str = (char *)src;
 	lend = ft_strlen(dest);
 	lens = ft_strlen(str);
 	if (destsize <= lend)

@@ -1,11 +1,15 @@
-#include<stdio.h>
-int main()
-{
-	char const *s1 = "set hello world!";
-	char const *set = "set";
-	char	*str;
+#include "libft.h"
+#include <stdio.h>
 
+int	main(void)
+{
+	char const	*s1;
+	char const	*set;
+	char		*str;
+
+	s1 = "set hello world!";
+	set = "set";
 	str = ft_strtrim(s1, set);
-	printf ("%s\n", str);
+	printf("%s\n", str);
 	return (0);
 }

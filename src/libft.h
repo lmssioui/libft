@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 03:09:41 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/06 06:55:49 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/07 00:24:25 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/07 00:31:58 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft.h
-#include<string.h>
-#include<stdlib.h>
+//libft
+#include <stdlib.h>
+#include <string.h>
 
 #ifndef LIBFT_H
 #define LIBFT_H
@@ -32,15 +32,18 @@ void			*ft_memset(void *b, int c, unsigned int len);
 char			*ft_strchr(char *s, int c);
 int				ft_strlen(char *str);
 int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
-char			*ft_strnstr(const char *haystack,const char *needle, unsigned int len);
+char			*ft_strnstr(const char *haystack, const char *needle,
+					unsigned int len);
 char			*ft_strrchr(const char *s, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			*ft_calloc(size_t nmemb, size_t size);
-char			*ft_strnstr(const char *big, const char *little, unsigned int len);
+char			*ft_strnstr(const char *big, const char *little,
+					unsigned int len);
 char			*ft_strdup(const char *s);
-char			*ft_substr(char	const	*s, unsigned int start, size_t len);
-char 			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize);
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int destsize);
-#endif
+char			*ft_strtrim(char const *s1, char const *set);
+#endif //LIBFT_H

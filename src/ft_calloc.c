@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stddef.h>
-#include<stdlib.h>
+#include <stddef.h>
+#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	total_size = nmemb * size;
 	if (nmemb != 0 && total_size / nmemb != size)
 		return (NULL);
-	array = malloc (total_size);
+	array = malloc(total_size);
 	if (array == NULL)
 		return (0);
 	ft_memset(array, 0, total_size);

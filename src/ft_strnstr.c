@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	while (*big && len > 0)
 	{
 		if (ft_strncmp(big, little, len) == 0)
-			return ((char *) big);
+			return ((char *)big);
 		big++;
 		len--;
 	}

@@ -6,31 +6,29 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:30:27 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/06 22:04:00 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/07 00:55:44 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	size_t	len_s1;
-	size_t	len_set;
+	size_t	start;
+	size_t	endi;
+	size_t len;
+	char const *str;
 
-	len_s1 = ft_strlen(s1);
-	len_set = ft_strlen(set);
-	str = (char *)malloc (sizeof (char) * len_set);
-	if (str = NULL)
-		return (NULL);
-	if (ft_strnstr(s1, set, len_s1))
-		while (*set)
-		{
-			*str = s1[len_s1];
-			set++;
-			str++;
-			len_s1++;
-		}
+	start = 0;
+	while(s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start  && ft_strchr(set, s1[end - 1]))
+		end--;
+	len = end - start;
+	str = (char *)malloc(sizeof(char) * (len + 1))
+			if (str = NULL)
+				return (NULL);
+	ft_strlcpy(str, s1 + start, len + 1);
 	return (str);
 }
-

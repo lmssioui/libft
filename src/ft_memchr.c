@@ -9,16 +9,16 @@
 /*   Updated: 2023/11/05 12:17:00 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, unsigned int n)
 {
 	const unsigned char	*p;
 
-	p = (const unsigned char *) s;
+	p = (const unsigned char *)s;
 	while (n > 0)
 	{
-		if (*p == (unsigned char) c)
+		if (*p == (unsigned char)c)
 		{
 			return ((void *)p);
 		}

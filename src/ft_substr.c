@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<stddef.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-char	*ft_substr(char	const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
 
 	i = 0;
-	sub = (char *)malloc (len + 1);
+	sub = (char *)malloc(len + 1);
 	if (sub == NULL)
 		return (NULL);
 	while (s[start] && len > 0)
