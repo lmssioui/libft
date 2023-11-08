@@ -6,11 +6,12 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:34:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/04 19:14:58 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/07 01:41:19 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int n)
 {
-	return (n >= 0 && n <= 9);
+	return (n >= '0' && n <= '9');
 }

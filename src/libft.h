@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft
+// libft
 #include <stdlib.h>
 #include <string.h>
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, unsigned int n);
@@ -46,4 +46,4 @@ char			*ft_strjoin(char const *s1, char const *s2);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize);
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int destsize);
 char			*ft_strtrim(char const *s1, char const *set);
-#endif //LIBFT_H
+#endif // LIBFT_H

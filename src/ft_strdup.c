@@ -6,32 +6,30 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 03:33:53 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/06 03:37:03 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/07 02:06:21 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
-{
-	int	i;
-
-	i = 0;
-	while (*s)
-		i++;
-	return (i);
-}
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
+	char	*str;
+	char	*original;
 
-	dup = (char *)malloc(ft_strlen(s) + 1);
-	if (dup == NULL)
+	str = (char *) s;
+	dup = (char *)malloc(ft_strlen(str) + 1);
+	if (!dup)
 		return (NULL);
-	while (*s)
+	original = dup;
+	while (*str)
 	{
-		*dup = *s;
-		*dup++;
-		s++;
+		*dup = *str;
+		dup++;
+		str++;
 	}
-	return (dup);
+	*dup = '\0';
+	return (original);
 }
