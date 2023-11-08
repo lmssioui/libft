@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 05:09:21 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/07 01:31:59 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 04:11:41 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,9 @@ char	*ft_strchr(char *s, int c)
 			return (s);
 		s++;
 	}
-	return (0);
+	if (*s == (char) c)
+	{
+		return (s);
+	}
+	return (NULL);
 }

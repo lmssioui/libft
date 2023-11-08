@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 01:22:53 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/07 01:22:58 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:36:50 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	char const	*set;
 	char		*str;
 
-	s1 = "set hello world!";
+	s1 = "sut hello world! sut";
 	set = "set";
 	str = ft_strtrim(s1, set);
 	printf("%s\n", str);

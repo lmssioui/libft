@@ -6,9 +6,12 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:24:08 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/05 20:01:08 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:25:02 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include<unistd.h>
 
 int	ft_atoi(const char *str)
 {
@@ -30,5 +33,6 @@ int	ft_atoi(const char *str)
 		r = r * 10 + (*str - '0');
 		str++;
 	}
-	return (r * s);
+	r = r * s;
+	return (r);
 }

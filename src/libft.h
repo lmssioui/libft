@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:24:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/07 00:31:58 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:51:42 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ char			*ft_strnstr(const char *big, const char *little,
 char			*ft_strdup(const char *s);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize);
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int destsize);
 char			*ft_strtrim(char const *s1, char const *set);
-#endif // LIBFT_H
+unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int destsize);
+size_t			ft_strlcat(char *  dst, const char *  src, size_t dstsize);
+
+#endif

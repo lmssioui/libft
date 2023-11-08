@@ -6,26 +6,35 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:14:23 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/06 07:51:58 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:43:00 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	lend;
-	unsigned int	lens;
-	char			*str;
+	size_t	sizedest;
+	size_t	sizesrc;
+	size_t	i;
+	size_t	j;
 
-	str = (char *)src;
-	lend = ft_strlen(dest);
-	lens = ft_strlen(str);
-	if (destsize <= lend)
-		return (lens + destsize);
-	while (*dest)
-		dest++;
-	while (lend < destsize - 1 && *src)
-		*dest++ = *src++;
-	*dest = '\0';
-	return (lend + lens);
+	i = 0;
+	j = 0;
+	sizedest = ft_strlen(dst);
+	sizesrc = ft_strlen((char *)src);
+	if (dstsize <= sizedest)
+	{
+		return (dstsize + sizesrc);
+	}
+	while (dst[i] && i < dstsize - 1)
+		i++;
+	while (i < dstsize - 1 && src[j])
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
+	dst[i] = '\0';
+	return (sizedest + sizesrc);
 }

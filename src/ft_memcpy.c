@@ -6,9 +6,11 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 22:22:48 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/05 00:26:53 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/08 18:36:42 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 {
@@ -19,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 	s1 = (unsigned char *)dst;
 	s2 = (const unsigned char *)src;
 	i = 0;
+	if (s1 == s2)
+		return (dst);
 	while (i < n)
 	{
 		s1[i] = s2[i];
