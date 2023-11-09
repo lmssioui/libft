@@ -6,11 +6,13 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:16:13 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/04 19:19:18 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 03:07:59 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stdlib.h>
+
+size_t	ft_strlen(char *str)
 {
 	int	len;
 

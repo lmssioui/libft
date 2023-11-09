@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 11:10:13 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/08 22:58:17 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:16:02 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned char u1;
-	unsigned char u2;
+	unsigned char	u1;
+	unsigned char	u2;
 
 	while (n > 0 && (*s1 || *s2))
 	{
