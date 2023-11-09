@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:19:50 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 13:28:58 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:40:12 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
-	if (n >= 0 && n <= 9)
-		ft_putchar_fd(n % 10 + '0', fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
