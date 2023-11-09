@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:24:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 22:25:51 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 00:23:16 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_itoa(int n);
+char			**ft_split(char const *s, char c);
 #endif
