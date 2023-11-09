@@ -6,12 +6,12 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:24:08 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/08 13:25:02 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 21:49:53 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<unistd.h>
+#include <unistd.h>
 
 int	ft_atoi(const char *str)
 {

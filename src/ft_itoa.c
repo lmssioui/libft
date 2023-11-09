@@ -5,13 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/09 20:22:22 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/09 22:22:53 by abouyata         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:00:12 by abouyata          #+#    #+#             */
 /*   Updated: 2023/11/09 18:01:42 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 int	count(int nb)
 {
 	int	i;
@@ -22,40 +35,39 @@ int	count(int nb)
 		i++;
 		nb = -nb;
 	}
-	if (nb > 0)
+	while (nb > 0)
 	{
-		while (i < nb)
-		{
-			nb = nb / 10;
-			i++;
-		}
+		nb = nb / 10;
+		i++;
 	}
 	return (i);
 }
+
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int	i;
+	char		*str;
+	long int	nbr;
+	int		i;
+	int		nb;
 
-	str = (char *)malloc(count(n) + 1);
-	if (str == NULL)
+	nbr = n;
+	nb = count(n);
+	if (!(str = (char *)malloc(nb + 1)))
 		return (NULL);
-	i = 0;
-	while ( i < count(n) && i < nb)
+	if (nbr < 0)
 	{
-		str[i] = ( n / 10 + '0');
-		n = n / 10;
-		i++;
+		*str = '-';
+		nbr = -nbr;
 	}
-	str[i] = nb % 10 + '0';
-	str[i] = '\0';
+	i = nb - 1;
+	while (i >= 0)
+        {
+                str[i] = nbr % 10 + '0';
+                nbr = nbr / 10;
+                i--;
+        }
+	if (n < 0)
+		str[0] = '-';
+	str[nb] = '\0';
 	return (str);
-}
-#include <stdio.h>
-int main()
-{
-	int n = -1452;
-       printf("%d\n",count (n));
-       printf("%s\n",ft_itoa(n));
-
 }
