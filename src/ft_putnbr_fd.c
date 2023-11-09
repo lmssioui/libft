@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 01:22:53 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/08 22:36:50 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/09 11:19:50 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/09 13:28:58 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <unistd.h>
 
-int	main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char const	*s1;
-	char const	*set;
-	char		*str;
-
-	s1 = "sut hello world! sut";
-	set = "set";
-	str = ft_strtrim(s1, set);
-	printf("%s\n", str);
-	return (0);
+	if (n == -2147483648)
+	{
+		write (fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	if (n >= 0 && n <= 9)
+		ft_putchar_fd(n % 10 + '0', fd);
 }

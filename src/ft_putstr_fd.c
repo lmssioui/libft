@@ -6,11 +6,13 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 03:42:58 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 03:50:23 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:17:24 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putstr_fd(char *s, int fd)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{

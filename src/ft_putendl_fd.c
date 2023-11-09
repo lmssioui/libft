@@ -6,12 +6,15 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 03:52:38 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 03:53:38 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:17:52 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *s, int fd)
+#include <unistd.h>
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr(s, fd);
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

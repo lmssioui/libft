@@ -6,7 +6,7 @@
 #    By: hfafouri <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 18:11:29 by hfafouri          #+#    #+#              #
-#    Updated: 2023/11/09 03:55:53 by abouyata         ###   ########.fr        #
+#    Updated: 2023/11/09 11:34:18 by abouyata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRCS	= ft_isalpha.c ft_isdigit.c	ft_isalnum.c ft_isascii.c \
@@ -16,7 +16,7 @@ SRCS	= ft_isalpha.c ft_isdigit.c	ft_isalnum.c ft_isascii.c \
 		  ft_strnstr.c ft_strrchr.c ft_substr.c ft_tolower.c \
 		  ft_toupper.c ft_memchr.c ft_atoi.c ft_calloc.c \
 		  ft_strtrim.c ft_memcmp.c ft_putchar_fd.c\
-		  ft_putstr_fd.c ft_putendl_fd.c\
+		  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
 OBJCS	= ${SRCS:.c=.o}
 NAME	= libft.a
