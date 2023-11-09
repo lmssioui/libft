@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:22:22 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 22:22:53 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:36:01 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	count(int nb)
 {
@@ -47,12 +47,13 @@ char	*ft_itoa(int n)
 {
 	char		*str;
 	long int	nbr;
-	int		i;
-	int		nb;
+	int			i;
+	int			nb;
 
 	nbr = n;
 	nb = count(n);
-	if (!(str = (char *)malloc(nb + 1)))
+	str = (char *)malloc(nb + 1);
+	if (str == NULL)
 		return (NULL);
 	if (nbr < 0)
 	{
@@ -61,11 +62,10 @@ char	*ft_itoa(int n)
 	}
 	i = nb - 1;
 	while (i >= 0)
-        {
-                str[i] = nbr % 10 + '0';
-                nbr = nbr / 10;
-                i--;
-        }
+	{
+		str[i--] = nbr % 10 + '0';
+		nbr = nbr / 10;
+	}
 	if (n < 0)
 		str[0] = '-';
 	str[nb] = '\0';
