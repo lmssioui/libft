@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 00:02:53 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/10 00:29:44 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 01:40:44 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	**ft_split(char const *s, char c)
 		s++;
 	}
 	nc++;
-	tab = (char **)malloc(sizeof (char *)*(nc + 1));
+	tab = (char **)malloc(sizeof (char *) * (nc + 1));
 	if (tab == NULL)
 		return (NULL);
 	len_s = 0;

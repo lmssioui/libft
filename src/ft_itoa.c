@@ -6,36 +6,24 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:22:22 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 22:36:01 by abouyata         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 17:00:12 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/09 18:01:42 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 02:02:03 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count(int nb)
+int	count(long long  nb)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (nb < 0)
 	{
 		i++;
 		nb = -nb;
 	}
-	while (nb > 0)
+	while (nb > 9)
 	{
 		nb = nb / 10;
 		i++;
@@ -46,7 +34,7 @@ int	count(int nb)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	long int	nbr;
+	long long	nbr;
 	int			i;
 	int			nb;
 
@@ -57,7 +45,6 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (nbr < 0)
 	{
-		*str = '-';
 		nbr = -nbr;
 	}
 	i = nb - 1;
