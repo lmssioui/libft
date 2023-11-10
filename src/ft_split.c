@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 02:34:01 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/10 04:02:43 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 04:48:37 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ static size_t	ft_count(char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char		**tab;
-	size_t		str_len;
-	int			i;
-	char		*end;
+	char	**tab;
+	size_t	str_len;
+	int		i;
+	char	*end;
 
 	tab = (char **)malloc((ft_count((char *)s, c) + 1) * sizeof(char *));
 	if (!s || !tab)
@@ -56,9 +56,7 @@ char	**ft_split(char const *s, char c)
 			{
 				tab[i] = (char *)malloc(str_len + 1);
 				if (!tab[i])
-				{
 					return (NULL);
-				}
 				strncpy(tab[i], s, str_len);
 				tab[i][str_len] = '\0';
 				i++;
