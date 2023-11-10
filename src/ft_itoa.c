@@ -6,14 +6,14 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:22:22 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/10 02:02:03 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 02:06:14 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count(long long  nb)
+int	count(long long nb)
 {
 	int	i;
 
