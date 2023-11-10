@@ -6,15 +6,15 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:24:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/10 05:43:54 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/10 06:14:13 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
+# include <string.h>
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, unsigned int n);
@@ -51,5 +51,6 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
-char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 #endif
