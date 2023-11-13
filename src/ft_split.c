@@ -6,13 +6,14 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 02:34:01 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/10 04:48:37 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:09:21 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 static size_t	ft_count(char *s, char c)
 {
@@ -31,39 +32,54 @@ static size_t	ft_count(char *s, char c)
 	return (count);
 }
 
+static char	**ft_free(char **str, int n)
+{
+	while (n > 0)
+	{
+		free(str[--n]);
+	}
+	free(str);
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	size_t	str_len;
 	int		i;
-	char	*end;
+	int		j;
+	int		n;
 
+	n = 0;
 	tab = (char **)malloc((ft_count((char *)s, c) + 1) * sizeof(char *));
-	if (!s || !tab)
+	if (!tab)
 		return (NULL);
 	i = 0;
-	while (*s)
+	while (s[i])
 	{
-		while (*s == c)
-			s++;
-		if (*s)
-		{
-			end = (char *)s;
-			while (*end && *end != c)
-				end++;
-			str_len = end - s;
-			if (str_len > 0)
-			{
-				tab[i] = (char *)malloc(str_len + 1);
-				if (!tab[i])
-					return (NULL);
-				strncpy(tab[i], s, str_len);
-				tab[i][str_len] = '\0';
-				i++;
-			}
-			s = end;
-		}
+		while (s[i] == c)
+			i++;
+		if (s[i] == '\0')
+			break ;
+		j = 0;
+		while (s[i] != '\0' && s[i] != c && j++ > -1)
+			i++;
+		tab[n++] = ft_substr(s, i - j, j);
+		if (!tab[n - 1])
+			return (ft_free(tab, n));
 	}
-	tab[i] = NULL;
+	tab[n] = NULL;
 	return (tab);
 }
+/*int main()
+{
+	char *str = "";
+	char c = 'a';
+	char **tab;
+	tab = ft_split(str, c);
+	int i = 0;
+	while (i < 1)
+	{
+		printf("%s\n",tab[i]);
+		i++;
+	}
+}*/
