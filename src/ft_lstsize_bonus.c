@@ -6,23 +6,33 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 00:06:27 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 00:10:10 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:39:19 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	 *tmp;
 	int	count;
 
-	tmp = lst;
 	count = 0;
-	while (tmp->next != NULL)
+	while (lst != NULL)
 	{
 		count++;
-		tmp = tmp->next;
+		lst = lst->next;
 	}
 	return (count);
 }
+/*#include <stdio.h>
+int main()
+{
+	t_list *head = ft_lstnew("aplle");
+	t_list *node1 = ft_lstnew("ourika");
+	t_list *node2 = ft_lstnew("arbalo");
+	t_list *node3 = ft_lstnew("oukaymden");
+	head->next = node1;
+	node1->next = node2;
+	node2->next = node3;
+	printf("%d\n",ft_lstsize(head));
+}*/

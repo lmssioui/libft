@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 01:56:43 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 02:10:54 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/14 20:45:07 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/14 20:45:13 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
-
-	while (*lst != NULL)
-	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
-	}
-	*lst = NULL;
+	new->next = *lst;
+	*lst = new;
 }
+/*#include <stdio.h>
+int main()
+{
+	t_list *head = ft_lstnew("aplle");
+	t_list *nodeone = ft_lstnew("ourika");
+	head->next = nodeone;
+	ft_lstadd_front(&head,nodeone);
+	printf("%s\n",head->content);
+}*/	

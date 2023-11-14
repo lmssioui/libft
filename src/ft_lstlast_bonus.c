@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 02:14:29 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 03:39:47 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/14 00:13:22 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/14 16:50:18 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst != NULL)
-	{
-		(*f)(lst->content);
+	if (lst == NULL)
+		return (lst);
+	while (lst->next != NULL)
 		lst = lst->next;
-	}
+	return (lst);
 }
-/*#include<stdio.h>
-void my_function(void *content)
-{
-	printf("%s\n", (char *)content);
-}
-int main(void)
+/*#include <stdio.h>
+int main()
 {
 	t_list *head = ft_lstnew("apple");
-	t_list *node2 = ft_lstnew("banana");
-	head->next = node2;
-	ft_lstiter(head, &my_function);
-	return 0;
+	t_list *node = ft_lstnew("ourika");
+	t_list *str;
+	head->next = node;
+	str = ft_lstlast(head);
+	printf("%s\n",(char *)str->content);
 }*/

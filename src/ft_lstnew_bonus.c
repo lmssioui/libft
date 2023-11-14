@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:03:42 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 03:27:09 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:07:10 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,9 @@ t_list	*ft_lstnew(void *content)
 	}
 	return (new);
 }
+/*#include <stdio.h>
+int	main()
+{
+	t_list *new = ft_lstnew("Apple");
+	printf("%s\n", (char *)new->content);
+}*/
