@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 03:41:15 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 14:29:59 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/14 23:08:38 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/14 23:51:20 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,36 +31,54 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (hnew_lst);
 }
-/*void delete_content(void *content)
+/*void *my_function(void *lst)
 {
-	free(content);
+    size_t i = 0;
+    char *src = (char *)lst;
+    char *new_content = malloc(strlen(src) + 1);
+
+    if (new_content == NULL) {
+        return NULL;
+    }
+
+    strcpy(new_content, src);
+
+    while (new_content[i])
+    {
+        if (new_content[i] >= 'a' && new_content[i] <= 'z')
+        {
+            new_content[i] = new_content[i] - 32;
+        }
+        i++;
+    }
+
+    return new_content;
 }
-#include <stdio.h>
-
-void	*my_function(void *lst)
+void	my_delete(void *lst)
 {
-	printf("%s\n", (char *)lst);
-	return (lst);
+	free(lst);
 }
+#include<stdio.h>
 
-int	main(void)
+int main()
 {
-	t_list *head = ft_lstnew("apple");
-	t_list *node2 = ft_lstnew("banana");
-	t_list *node3 = ft_lstnew("cherry");
-	head->next = node2;
-	node2->next = node3;
-
-	t_list *new_list = ft_lstmap(head, &my_function, &delete_content);
-
-	printf("Original list:\n");
-	ft_lstiter(head, &my_function);
-
-	printf("\nMapped list:\n");
-	ft_lstiter(new_list, &my_function);
-
-	ft_lstclear(&head, &delete_content);
-	ft_lstclear(&new_list, &delete_content);
-
-	return (0);
+	t_list *head = ft_lstnew("Apple");
+	t_list *new = ft_lstnew("hamza");
+	t_list *node = ft_lstnew("AbdLlatif");
+	head->next = new;
+	new->next = node;
+	t_list *tmp = head;
+	printf("******befor*******\n");
+	while(tmp)
+	{
+		printf("%s\n",(char *)tmp->content);
+		tmp = tmp->next;
+	}
+	printf("------after------\n");
+	t_list *str =ft_lstmap(head, my_function, my_delete);
+	while(str)
+	{
+		printf("%s\n",(char *)str->content);
+		str = str->next;
+	}
 }*/
