@@ -6,7 +6,7 @@
 #    By: hfafouri <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 18:11:29 by hfafouri          #+#    #+#              #
-#    Updated: 2023/11/10 06:22:45 by abouyata         ###   ########.fr        #
+#    Updated: 2023/11/14 02:31:04 by abouyata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRCS	= ft_isalpha.c ft_isdigit.c	ft_isalnum.c ft_isascii.c \
@@ -18,8 +18,12 @@ SRCS	= ft_isalpha.c ft_isdigit.c	ft_isalnum.c ft_isascii.c \
 		  ft_strtrim.c ft_memcmp.c ft_putchar_fd.c\
 		  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 		  ft_itoa.c ft_split.c ft_strmapi.c ft_striteri.c\
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast\
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
+		ft_lstiter.c
 
 OBJCS	= ${SRCS:.c=.o}
+BONUS_OBJCS = $(BONUS_SRC:.c=.o)
 NAME	= libft.a
 LIBC	= ar rcs
 CFLAGS	= -Wall -Wextra -Werror
@@ -34,12 +38,15 @@ ${NAME} : ${OBJCS}
 
 all : ${NAME}
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+
 clean:
-	${RM} ${OBJCS}
+	${RM} ${OBJCS} $(BONUS_OBJS)
 
 fclean : clean
 	${RM} ${NAME}
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus
