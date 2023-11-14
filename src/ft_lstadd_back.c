@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lsadd_back.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 00:19:40 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 00:28:46 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/14 04:25:42 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return;
 	}
-	tmp = ft_lstlast(*lst)
+	tmp = ft_lstlast(*lst);
 	tmp->next = new;
 	new->next = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 02:14:29 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 03:27:30 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/14 03:39:47 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-#include<stdio.h>
+/*#include<stdio.h>
 void my_function(void *content)
 {
 	printf("%s\n", (char *)content);
@@ -32,4 +32,4 @@ int main(void)
 	head->next = node2;
 	ft_lstiter(head, &my_function);
 	return 0;
-}
+}*/
