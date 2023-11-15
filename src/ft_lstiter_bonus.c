@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:46:49 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/15 00:16:06 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:11:02 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-/*#include <stdio.h>
-void my_function(void *lst)
-{
-	char *s = lst;
-	printf("%s|",s);
-}
-int main()
-{
-	t_list *head = ft_lstnew("abdellatif");
-	t_list *new  = ft_lstnew("Bouyatas");
-	head->next = new;
-	ft_lstiter(head, my_function);
-}*/

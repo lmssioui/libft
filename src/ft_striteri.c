@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 06:08:29 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/15 08:07:56 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:52:10 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		f((unsigned int)i, &s[i]);
 		i++;
 	}
-}
-#include <stdio.h>
-void *my_function(unsigned int i, char *s)
-{
-	printf("%c\n",s[i]);
-}
-int main()
-{
-	char *s = "abdellatif";
-	ft_striteri(s, my_function(7, s));
 }
