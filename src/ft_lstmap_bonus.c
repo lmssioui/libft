@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 23:08:38 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/16 17:34:03 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/17 04:39:46 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*hnew_lst;
-	//t_list	*tmp;
+	t_list *new_list;
+	t_list *save;
 
-	hnew_lst = NULL;
-	while (lst != NULL)
+	if (!lst || !f || !del)
+		return (0);
+	new_list = ft_lstnew(f(lst->content));
+	if (!new_list)
+		return (0);
+	save = new_list;
+	lst = lst->next;
+	while (lst)
 	{
-		new_lst = ft_lstnew((*f)(lst->content));
-		if (new_lst == NULL)
+		new_list->next = ft_lstnew(f(lst->content));
+		if (!new_list->next)
 		{
-			ft_lstclear(&hnew_lst, del);
-			ft_lstdelone(lst, del);
-			break ;
+			ft_lstclear(&save, del);
+			return (0);
 		}
-		ft_lstadd_back(&hnew_lst, new_lst);
+		new_list = new_list->next;
 		lst = lst->next;
 	}
-	return (hnew_lst);
+	new_list->next = NULL;
+	return (save);
 }
