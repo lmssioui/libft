@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 02:34:01 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/13 18:09:21 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:58:52 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
 		if (s[i] == '\0')
 			break ;
 		j = 0;
-		while (s[i] != '\0' && s[i] != c && j++ > -1)
+		while (s[i] != '\0' && s[i] != c && j++ >= 0)
 			i++;
 		tab[n++] = ft_substr(s, i - j, j);
 		if (!tab[n - 1])
@@ -72,14 +72,16 @@ char	**ft_split(char const *s, char c)
 }
 /*int main()
 {
-	char *str = "";
-	char c = 'a';
+	char *str = "hello world Tamazight";
+	char c = ' ';
 	char **tab;
 	tab = ft_split(str, c);
 	int i = 0;
-	while (i < 1)
+	int j = 1;
+	while (i < 3)
 	{
-		printf("%s\n",tab[i]);
+		printf("string%d: %s\n",j,tab[i]);
 		i++;
+		j++;
 	}
 }*/
