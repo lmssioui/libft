@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:46:49 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/15 16:11:02 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/20 00:18:16 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,22 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+/*
+#include <stdio.h>
+static void my_function(void *content)
+{
+	char *str = (char *)content;
+	while(*str)
+	{
+		printf("-->%c<---\n",*str);
+		str++;
+	}
+}
+
+#include <stdio.h>
+int main()
+{
+	const char *src = "abdellatif";
+	t_list *new = ft_lstnew(ft_strdup(src));
+	ft_lstiter(new, my_function);
+}*/
