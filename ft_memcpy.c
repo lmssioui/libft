@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 03:28:58 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/16 03:52:03 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/04 22:22:48 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/18 23:10:39 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 {
-	size_t	total_size;
-	void	*array;
+	unsigned char		*s1;
+	const unsigned char	*s2;
+	unsigned int		i;
 
-	total_size = nmemb * size;
-	if (nmemb != 0 && total_size / nmemb != size)
+	s1 = (unsigned char *)dst;
+	s2 = (const unsigned char *)src;
+	i = 0;
+	if (s1 == s2 || n == 0)
+		return (dst);
+	if (!s1 && !s2)
 		return (NULL);
-	array = malloc(total_size);
-	if (array == NULL)
-		return (0);
-	ft_memset(array, 0, total_size);
-	return (array);
+	if(s1 != s2) 
+	{
+		while (i < n)
+		{
+			s1[i] = s2[i];
+			i++;
+		}
+	}
+	return (dst);
 }

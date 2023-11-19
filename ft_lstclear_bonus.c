@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 22:22:48 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/08 18:36:42 by abouyata         ###   ########.fr       */
+/*   Created: 2023/11/14 20:45:37 by abouyata          #+#    #+#             */
+/*   Updated: 2023/11/19 11:50:10 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, unsigned int n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	unsigned char		*s1;
-	const unsigned char	*s2;
-	unsigned int		i;
+	t_list	*tmp;
 
-	s1 = (unsigned char *)dst;
-	s2 = (const unsigned char *)src;
-	i = 0;
-	if (s1 == s2)
-		return (dst);
-	while (i < n)
+	if (del == NULL)
 	{
-		s1[i] = s2[i];
-		i++;
+		return ;
+	}	
+	if (lst)
+	{
+		while (*lst != NULL)
+		{
+			tmp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = tmp;
+		}
 	}
-	return (dst);
 }

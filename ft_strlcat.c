@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:14:23 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/08 22:43:00 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/18 15:26:05 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
+	if (dstsize == 0)
+		return (ft_strlen(src));
 	sizedest = ft_strlen(dst);
 	sizesrc = ft_strlen((char *)src);
 	if (dstsize <= sizedest)

@@ -6,14 +6,11 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 02:34:01 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/16 23:58:52 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:07:00 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 static size_t	ft_count(char *s, char c)
 {
@@ -50,6 +47,8 @@ char	**ft_split(char const *s, char c)
 	int		n;
 
 	n = 0;
+	if (s == NULL)
+		return (NULL);
 	tab = (char **)malloc((ft_count((char *)s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
@@ -72,13 +71,13 @@ char	**ft_split(char const *s, char c)
 }
 /*int main()
 {
-	char *str = "hello world Tamazight";
-	char c = ' ';
+	char *str = NULL;
+	char c = '\0';
 	char **tab;
 	tab = ft_split(str, c);
 	int i = 0;
 	int j = 1;
-	while (i < 3)
+	while (i < ft_count(str,c))
 	{
 		printf("string%d: %s\n",j,tab[i]);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:24:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/14 04:13:22 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:01:46 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
+# include <unistd.h>
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, unsigned int n);
