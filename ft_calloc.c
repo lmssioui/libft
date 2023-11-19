@@ -6,12 +6,11 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 03:28:58 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/19 17:41:46 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:16:28 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
