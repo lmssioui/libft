@@ -6,24 +6,21 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 03:28:58 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/18 20:39:45 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:13:49 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
 
-	if (nmemb != 0 && ((nmemb * size) / nmemb) != size)
+	if (nmemb != 0 && ((size > SIZE_MAX / nmemb)))
 		return (NULL);
 	array = malloc(nmemb * size);
 	if (array == NULL)
-		return (0);
+		return (NULL);
 	ft_memset(array, 0, nmemb * size);
 	return (array);
 }

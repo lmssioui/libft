@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 06:08:29 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/17 03:56:53 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 15:22:23 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
-	if (s == NULL || !f)
+	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i] != '\0')

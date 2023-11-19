@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 22:22:48 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/18 23:10:39 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:35:28 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 		return (dst);
 	if (!s1 && !s2)
 		return (NULL);
-	if(s1 != s2) 
+	if (s1 != s2)
 	{
 		while (i < n)
 		{
