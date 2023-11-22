@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:19:50 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/20 01:13:18 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/18 17:57:42 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,4 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd(n % 10 + '0', fd);
-}
-#include <fcntl.h>
-int main()
-{
-	int fd;
-	int a = 145693;
-	fd = open("test.txt", O_WRONLY | O_TRUNC, 0644);
-	ft_putnbr_fd(a,fd);
-	close(fd);
 }
