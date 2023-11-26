@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:14:23 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/18 15:26:05 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:25:09 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (sizedest + sizesrc);
 }
+/*
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	const char dst[] = "abdellatif";
+	const char src[] = "Iwis n tmazight";
+	char buffer[15];
+
+	strcpy(buffer, dst);
+	int r = ft_strlcat(buffer, src, 5);
+	printf("Return Value = %d \nbuffer = %s", r, buffer);
+}*/

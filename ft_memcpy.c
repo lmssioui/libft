@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 22:22:48 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/19 16:35:28 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:12:20 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,19 @@ void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 	}
 	return (dst);
 }
+/*#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int a[] = {0, 2, 3};
+	int b[] = {7, 1};
+	void *c = ft_memcpy(b,a,12);
+	int *p = (int *)c;
+	int i = 0;
+	while (i < 3)
+	{
+		printf("%d\n",p[i]);
+		i++;
+	}
+	//printf("%s\n",memcpy("khouya","lkhwadrya",2));
+}*/

@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 02:34:01 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/19 13:53:06 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/23 21:03:35 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char	**ft_free(char **str, int n)
 	return (0);
 }
 
-static char	**ft_marrakech(char **tab, const char *s, char c)
+static char	**ft_strsub(char **tab, const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -73,15 +73,16 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)malloc((ft_count((char *)s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
-	return (ft_marrakech(tab, s, c));
+	return (ft_strsub(tab, s, c));
 }
-/*int main()
+/*#include <stdio.h>
+int main()
 {
-	char *str = NULL;
-	char c = '\0';
+	char *str = "abdellatif student in 1337 school";
+	char c = ' ';
 	char **tab;
 	tab = ft_split(str, c);
-	int i = 0;
+	size_t i = 0;
 	int j = 1;
 	while (i < ft_count(str,c))
 	{

@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 06:08:29 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/19 15:22:23 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/24 00:25:07 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+/*
+#include <stdio.h>
+void print_char_index(unsigned int index, char *c)
+{
+    printf("Character at index %u is: %c\n", index, *c);
+}
+
+int main()
+{
+    char my_string[] = "Hello, World!";
+
+    ft_striteri(my_string, &print_char_index);
+    return 0;
+}*/

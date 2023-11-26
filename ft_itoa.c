@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count(long long nb)
+static int	count(long long nb)
 {
 	int	i;
 

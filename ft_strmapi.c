@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 05:28:48 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/17 02:38:57 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:41:47 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,29 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[len_s] = '\0';
 	return (res);
 }
+/*
+char ft_chifrage(unsigned int index, char c) 
+{
+	int result;
+	if (index % 2 == 0) 
+	{
+		result = c + 1;
+	}
+	else 
+	{
+		result = c - 1;
+	}
+	return result;
+}
+
+int main() 
+
+{
+    const char *input_string = "1337";
+
+    printf("Original string: %s\n", input_string);
+   char *modified_string = ft_strmapi(input_string, &ft_chifrage);
+    printf("Modified string: %s\n", modified_string);
+    free(modified_string);
+    return 0;
+}*/
