@@ -6,7 +6,7 @@
 /*   By: abouyata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 06:25:25 by abouyata          #+#    #+#             */
-/*   Updated: 2023/11/26 18:16:12 by abouyata         ###   ########.fr       */
+/*   Updated: 2023/11/24 03:13:05 by abouyata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ft_strlcat(str + len_s1, s2, len_s1 + len_s2 + 1);
 	return (str);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
-	printf("%s" , ft_strjoin(NULL,NULL));
-}
+	printf("%s" , ft_strjoin(NULL,"TAZA"));
+}*/
